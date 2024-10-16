@@ -1,3 +1,5 @@
+import java.util.Scanner; 
+
 public class Main {
 
    public static void main(String []args) {
@@ -22,5 +24,48 @@ public class Main {
       System.out.println(pi < 0); // checking if negative 
       System.out.println(pi >= 3.14); // true 
       System.out.println(pi <= 10); // true 
+
+      // IF STATEMENTS
+      boolean isCold = false;
+      if (isCold == true) {
+         System.out.println("Bring a jacket!");
+      }
+      System.out.println("Enjoy your walk!");
+
+      System.out.println(" ");
+
+      // Magic 8-Ball Mini Program
+      Scanner scan = new Scanner(System.in);
+      System.out.println("Ask a question!");
+      String question = scan.nextLine();
+
+      // 1. Generate random integer between 1-8
+      int numb = (int) (Math.random() * 8 + 1); 
+
+      // 2. Use that number in 8 if statements to print a different response 
+      if (numb == 1) {
+         System.out.println("Def not");
+      }
+      if (numb == 2) {
+         System.out.println("Probably not");
+      }
+      if (numb == 3) {
+         System.out.println("No");
+      }
+      if (numb == 4) {
+         System.out.println("Eh");
+      }
+      if (numb == 5) {
+         System.out.println("lol");
+      }
+      if (numb == 6) {
+         System.out.println("Not happening");
+      }
+      if (numb == 7) {
+         System.out.println("No, ask something else");
+      }
+      if (numb == 8) {
+         System.out.println("...");
+      }
    }
 }
