@@ -74,12 +74,67 @@ public class Main {
       int myAge = 16;
       // BOOLEAN EXPRESSION here is "myAge >= 17"
       if (myAge >= 17) { 
-         Sytem.out.println("You can get your license in NY!");
+         System.out.println("You can get your license in NY!");
       }
       // else is coupled with the if statement above
       // so you do NOT need to specificy a CONDITION/EXPRESSION
       else {
          System.out.println("You're too young to drive in NY");
+      }
+
+      // MULTI-WAY SELECTION
+      System.out.println("What type of costume are you thinking of? (scary, cute, funny, other)");
+      String choice = "scary";
+
+      // Always start a "decision" awith an IF statement
+      if (choice.equals ("scary")) {
+         System.out.println("You should be a clown!");
+      }
+
+      // You can include as many ELSE IF statements as you want
+      // but they must follow an initial IF statement
+      else if (choice.equals("cute")) {
+         System.out.println("You should be a bunny!");
+      }
+
+      else if (choice.equals("funny")) {
+         System.out.println("You should be an inflatable cow!");
+      }
+
+      // Provide a "catch-all" choice in case earlier conditions are not met
+      else {
+         System.out.println("I have no idea how to help you. Look on Pinterest?");
+      }
+
+      // AND && Operator
+      // Both conditions need to be true for the conditional body to be executed 
+      boolean didHomework = false;
+      boolean cleanedRoom = true;
+
+      // can write the conditions either way below,
+      // both are valid because we're using boolean variables already 
+      if ((didHomework == true) && (cleanedRoom)) {
+         System.out.println("You can go out");
+      }
+      else {
+         System.out.println("You're grounded");
+      }
+      
+      // OR || Operator
+      // Evaluates to TRUE if AT LEAST one expression is true
+      if ( (didHomework) || (cleanedRoom) ) {
+         System.out.println("The more permissive parents say sure, go out and finish anything else later!");
+      }
+      else {
+         System.out.println("No, you need to do at least one of your tasks first.");
+      }
+
+      // NOT ! Operator
+      // Use this on just ONE condition to flip the boolean result
+      boolean walkSignOn = false;
+      // Condition body will execute only if condition is FALSE
+      if (!walkSignOn) {
+         System.out.println("STOP CROSSING THE STREET!!");
       }
    }
 }
